@@ -103,13 +103,13 @@ ValType& TVector<ValType>::operator[](int pos)
 template <class ValType> // сравнение
 bool TVector<ValType>::operator==(const TVector &v) const
 {
-	int res = 1;
-	if (Size != bf.Size) res = 0;
+	bool res = true;
+	if (Size != bf.Size || StartIndex != bf.StartIndex) res = false;
 	else
 		for (int i = 0; i < Size; i++)
 			if (pVector[i] != v.pVector[i])
 			{
-				res = 0;
+				res = false;
 				break;
 			}
 	return res;
