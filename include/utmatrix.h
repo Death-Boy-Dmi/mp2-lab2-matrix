@@ -104,7 +104,7 @@ template <class ValType> // сравнение
 bool TVector<ValType>::operator==(const TVector &v) const
 {
 	bool res = true;
-	if (Size != bf.Size || StartIndex != bf.StartIndex) res = false;
+	if (Size != v.Size || StartIndex != v.StartIndex) res = false;
 	else
 		for (int i = 0; i < Size; i++)
 			if (pVector[i] != v.pVector[i])
@@ -169,7 +169,7 @@ template <class ValType> // сложение
 TVector<ValType> TVector<ValType>::operator+(const TVector<ValType> &v)
 {
 	TVector temp(Size, StartIndex);
-	if (Size = val.Size)
+	if (Size = v.Size)
 	{
 		for (int i = 0; i < Size; i++)
 			temp.pVector[i] = pVector[i] + v.pVector[i];
@@ -196,7 +196,7 @@ template <class ValType> // скалярное произведение
 ValType TVector<ValType>::operator*(const TVector<ValType> &v)
 {
 	TVector temp(Size, StartIndex);
-	if (Size = val.Size)
+	if (Size = v.Size)
 	{
 	for (int i = 0; i < Size; i++)
 		temp.pVector[i] = pVector[i] * v.pVector[i];
