@@ -157,7 +157,7 @@ public:
 template <class ValType>
 TMatrix<ValType>::TMatrix(int s): TVector<TVector<ValType> >(s)
 {
-	if (s>0 && s < Size)
+	if (s>0 && s < MAX_MATRIX_SIZE)
 	{
 		for (int i = 0; i < s; i++) pVector [i] = TVector<ValType>(s - i, i);
 	}
