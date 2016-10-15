@@ -175,13 +175,13 @@ TMatrix<ValType>::TMatrix(const TVector<TVector<ValType> > &mt):
 template <class ValType> // сравнение
 bool TMatrix<ValType>::operator==(const TMatrix<ValType> &mt) const
 {
-	int res = 1;
-	if (Size != mt.Size) res = 0;
+	bool res = true;
+	if (Size != mt.Size) res = false;
 	else
 		for (int i = 0; i < Size; i++)
 			if (pVector[i] != mt.pVector[i])
 			{
-				res = 0;
+				res = false;
 				break;
 			}
 	return res;
