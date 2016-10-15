@@ -159,7 +159,7 @@ TMatrix<ValType>::TMatrix(int s): TVector<TVector<ValType> >(s)
 {
 	if (s>0 && s < Size)
 	{
-		for (int i = 0; i < s; i++) pVector<ValType>(s - i, i);
+		for (int i = 0; i < s; i++) pVector [i] = TVector<ValType>(s - i, i);
 	}
 	else throw s;
 } /*-------------------------------------------------------------------------*/
@@ -201,7 +201,7 @@ TMatrix<ValType>& TMatrix<ValType>::operator=(const TMatrix<ValType> &mt)
 		if (Size != mt.Size)
 		{
 			delete []pVector;
-			pVector = new TVector<ValType>[nt.Size];
+			pVector = new TVector<ValType>[mt.Size];
 		}
 		Size = mt.Size;
 		StartIndex = mt.StartIndex;
