@@ -81,7 +81,7 @@ TVector<ValType>::TVector(const TVector<ValType> &v)
 	pVector = new ValType[v.Size];
 	Size = v.Size;
 	StartIndex = v.StartIndex;
-	for (int i = 0; i < Size; i++) pVector[i] = v.pVektor[i];
+	for (int i = 0; i < Size; i++) pVector[i] = v.pVector[i];
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType>
