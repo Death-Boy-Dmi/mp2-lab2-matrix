@@ -62,9 +62,9 @@ public:
 template <class ValType>
 TVector<ValType>::TVector(int s, int si)
 {
-	if (s >0 && s < MAX_VECTOR_SIZE)
+	if (s >0 && s <= MAX_VECTOR_SIZE)
 	{
-		if (si > 0 && si < MAX_VECTOR_SIZE)
+		if (si > 0 && si <= MAX_VECTOR_SIZE)
 		{
 			pVector = new ValType[s];
 			Size = s;
