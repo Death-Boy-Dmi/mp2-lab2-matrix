@@ -64,7 +64,7 @@ TVector<ValType>::TVector(int s, int si)
 {
 	if (s >0 && s <= MAX_VECTOR_SIZE)
 	{
-		if (si > 0 && si <= MAX_VECTOR_SIZE)
+		if (si > 0)
 		{
 			pVector = new ValType[s];
 			Size = s;
@@ -181,7 +181,7 @@ TVector<ValType> TVector<ValType>::operator+(const TVector<ValType> &v)
 template <class ValType> // вычитание
 TVector<ValType> TVector<ValType>::operator-(const TVector<ValType> &v)
 {
-	if (Size = val.Size)
+	if (Size = v.Size)
 	{
 	TVector temp(Size, StartIndex);
 	for (int i = 0; i < Size; i++)
