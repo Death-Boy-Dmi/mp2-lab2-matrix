@@ -64,7 +64,7 @@ TVector<ValType>::TVector(int s, int si)
 {
 	if (s >0 && s <= MAX_VECTOR_SIZE)
 	{
-		if (si > 0)
+		if (si >= 0)
 		{
 			pVector = new ValType[s];
 			Size = s;
