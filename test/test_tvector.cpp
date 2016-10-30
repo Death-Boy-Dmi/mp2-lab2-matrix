@@ -40,10 +40,9 @@ TEST(TVector, copied_vector_has_its_own_memory)
 {
 	TVector<int>*v1 = new TVector<int>(10);
 	TVector<int> v2(*v1);
-	
-	ASSERT_NO_THROW(v2[9]);
+	delete v1;
 
-	delete[] v1;
+	ASSERT_NO_THROW(v2[9]);
 }
 
 TEST(TVector, can_get_size)

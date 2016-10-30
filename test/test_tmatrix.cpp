@@ -35,10 +35,9 @@ TEST(TMatrix, copied_matrix_has_its_own_memory)
 {
 	TMatrix<int>*m1 = new TMatrix<int>(7);
 	TMatrix<int> m2(*m1);
+	delete m1;
 	
 	ASSERT_NO_THROW(m2[0][0]);
-
-	delete[] m1;
 }
 
 TEST(TMatrix, can_get_size)
