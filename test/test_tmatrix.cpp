@@ -170,5 +170,5 @@ TEST(TMatrix, cant_subtract_matrixes_with_not_equal_size)
 {
 	TMatrix<int>m1(5), m2(10);
 
-	ASSERT_ANY_THROW(m1 * m2);
+	ASSERT_ANY_THROW(m1 - m2);
 }
